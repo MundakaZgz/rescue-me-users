@@ -15,6 +15,5 @@ class AppConfig(private val liveLayer: LiveLayer) {
     fun usersHandler(): UserHandler = UserHandler(object : Context {
         override val logger: Logger = LiveLogger
         override val userRepository: Repository = InMemoryRepository(liveLayer)
-
     })
 }

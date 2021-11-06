@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping
 class Handler(private val context: Context) {
 
     @GetMapping("{uuid}")
-    suspend fun getJediByUUID(@PathVariable uuid: String) = handle { bindGet(uuid) }
+    suspend fun getJediByUUID(@PathVariable uuid: String) =
+        handle { bindGet(uuid) }
 
     private suspend fun <A> handle(block: suspend () -> Reader<Context, Either<AppException, A>>) =
         block().provide(context).getOrHandle { throw it }
