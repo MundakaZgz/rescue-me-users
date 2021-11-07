@@ -8,7 +8,7 @@ import java.util.*
 
 interface Context : Has.Logger, Has.UserRepository
 
-suspend fun Context.bindGet(uuidString: String?) = either<AppException, User> {
+suspend fun Context.bindGet(uuidString: String) = either<AppException, User> {
     val uuid = validate { UUID.fromString(uuidString) }.bind()
     getByUUID(uuid).bind()
 }
