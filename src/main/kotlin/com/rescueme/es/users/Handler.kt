@@ -3,7 +3,6 @@ package com.rescueme.es.users
 import arrow.core.Either
 import arrow.core.getOrHandle
 import com.rescueme.es.shared.core.AppException
-import com.rescueme.es.shared.core.Reader
 import com.rescueme.es.users.core.Context
 import com.rescueme.es.users.core.bindGet
 import org.springframework.stereotype.Indexed
@@ -19,8 +18,8 @@ class Handler(private val context: Context) {
 
     @GetMapping("{uuid}")
     suspend fun getUserByUUID(@PathVariable uuid: String) =
-        handle { bindGet(uuid) }
+        handle { context.bindGet(uuid) }
 
-    private suspend fun <A> handle(block: suspend () -> Reader<Context, Either<AppException, A>>) =
-        block().provide(context).getOrHandle { throw it }
+    private suspend fun <A> handle(block: suspend () -> Either<AppException, A>) =
+        block().getOrHandle { throw it }
 }
