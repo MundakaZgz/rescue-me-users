@@ -1,8 +1,8 @@
 package com.rescueme.es
 
-import com.rescueme.es.core.define.Logger
-import com.rescueme.es.core.users.Context
-import com.rescueme.es.core.users.Repository
+import com.rescueme.es.shared.core.define.Logger
+import com.rescueme.es.users.core.Context
+import com.rescueme.es.users.core.Repository
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import com.rescueme.es.shared.LiveLayer

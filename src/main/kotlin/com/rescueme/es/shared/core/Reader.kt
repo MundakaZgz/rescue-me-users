@@ -1,4 +1,4 @@
-package com.rescueme.es.core
+package com.rescueme.es.shared.core
 
 class Reader<R, out A>(val provide: suspend (R) -> A) {
 

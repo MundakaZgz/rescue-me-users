@@ -1,7 +1,7 @@
-package com.rescueme.es.core.users
+package com.rescueme.es.users.core
 
-import com.rescueme.es.core.Reader
-import com.rescueme.es.core.define.Has
+import com.rescueme.es.shared.core.Reader
+import com.rescueme.es.shared.core.define.Has
 import java.util.*
 
 suspend fun <R> getByUUID(uuid: UUID) where R : Has.UserRepository = Reader { r: R ->

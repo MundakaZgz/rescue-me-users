@@ -1,9 +1,9 @@
-package com.rescueme.es.core.users
+package com.rescueme.es.users.core
 
 import arrow.core.Either
-import com.rescueme.es.core.AppException
-import com.rescueme.es.core.define.Has
-import com.rescueme.es.core.toReader
+import com.rescueme.es.shared.core.AppException
+import com.rescueme.es.shared.core.define.Has
+import com.rescueme.es.shared.core.toReader
 import java.util.*
 
 interface Context : Has.Logger, Has.UserRepository

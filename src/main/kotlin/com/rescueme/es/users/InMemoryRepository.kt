@@ -2,9 +2,9 @@ package com.rescueme.es.users
 
 import arrow.core.Either
 import arrow.core.getOrNone
-import com.rescueme.es.core.AppException
-import com.rescueme.es.core.users.Repository
-import com.rescueme.es.core.users.User
+import com.rescueme.es.shared.core.AppException
+import com.rescueme.es.users.core.Repository
+import com.rescueme.es.users.core.User
 import com.rescueme.es.shared.HasLive
 import java.util.*
 

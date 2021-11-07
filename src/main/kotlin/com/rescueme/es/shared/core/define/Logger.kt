@@ -1,4 +1,4 @@
-package com.rescueme.es.core.define
+package com.rescueme.es.shared.core.define
 
 interface Logger : Dependency {
     fun log(string: String)
