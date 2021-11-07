@@ -1,8 +1,8 @@
-package shared
+package com.rescueme.es.shared
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.env.Environment
-import users.MemoryContext
+import com.rescueme.es.users.MemoryContext
 
 @Configuration
 class LiveLayer(env: Environment): HasLive.InMemory, MemoryContext {

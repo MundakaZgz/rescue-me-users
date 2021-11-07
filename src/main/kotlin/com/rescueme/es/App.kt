@@ -1,3 +1,5 @@
+package com.rescueme.es
+
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 

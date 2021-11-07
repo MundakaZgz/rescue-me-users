@@ -1,12 +1,14 @@
-import core.define.Logger
-import core.users.Context
-import core.users.Repository
+package com.rescueme.es
+
+import com.rescueme.es.core.define.Logger
+import com.rescueme.es.core.users.Context
+import com.rescueme.es.core.users.Repository
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import shared.LiveLayer
-import shared.LiveLogger
-import users.InMemoryRepository
-import users.Handler as UserHandler
+import com.rescueme.es.shared.LiveLayer
+import com.rescueme.es.shared.LiveLogger
+import com.rescueme.es.users.InMemoryRepository
+import com.rescueme.es.users.Handler as UserHandler
 
 @Configuration
 class AppConfig(private val liveLayer: LiveLayer) {

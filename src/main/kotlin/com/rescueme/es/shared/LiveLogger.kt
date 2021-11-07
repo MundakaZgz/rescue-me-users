@@ -1,6 +1,6 @@
-package shared
+package com.rescueme.es.shared
 
-import core.define.Logger
+import com.rescueme.es.core.define.Logger
 
 object LiveLogger: Logger {
     override fun log(string: String) {

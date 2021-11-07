@@ -1,8 +1,8 @@
-package core.users
+package com.rescueme.es.core.users
 
 import arrow.core.Either
-import core.AppException
-import core.define.Dependency
+import com.rescueme.es.core.AppException
+import com.rescueme.es.core.define.Dependency
 import java.util.*
 
 interface Repository : Dependency {
